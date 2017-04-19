@@ -11,7 +11,7 @@ class FileSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'original_name', 'size', 'mime_type', 'created', 'modified', 'folder', 'file', 'owner')
         read_only_fields = ('id', 'original_name', 'size', 'mime_type', 'created', 'modified', 'folder', 'owner')
 
-    #TODO: get file size, mime type
+    # TODO: get file size, mime type
     def create(self, validated_data):
         file = File()
         file.name = validated_data['name']
